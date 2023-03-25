@@ -5,13 +5,14 @@ import UsuarioContext from './UsuarioContext';
 
 export default function NavBar(){
     const {theme, toggleTheme} = useContext(ThemeContext);
-    const {logado} = useContext(UsuarioContext);
+    const {logado, setLogado} = useContext(UsuarioContext);
 
     return(
         <div className={`app-${theme}`}>
         <h1>{theme}</h1>
         <button onClick={toggleTheme}>Troca o tema</button>
-
+        <h1>{logado? logado.nick : "Não logado"}</h1>
+        <button onClick={() => setLogado(undefined)}>Sair</button>
         </div>
     );
 }

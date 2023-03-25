@@ -3,7 +3,7 @@ import {Usuarios} from "./data";
 import { useState } from "react";
 
 export default function UsuarioProvider({children}){
-    const [logado, setLogado] = useState("G");
+    const [logado, setLogado] = useState();
     return(
         <UsuarioContext.Provider value={{Usuarios, logado, setLogado}}>
             {children}

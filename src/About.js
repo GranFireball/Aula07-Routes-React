@@ -1,5 +1,10 @@
+import { Link } from "react-router-dom";
+
 export default function About(){
     return(
-        <h1>About</h1>
+        <div>
+            <h1>About</h1>
+            <Link to="*">Not Found</Link>
+        </div>
     );
 }
